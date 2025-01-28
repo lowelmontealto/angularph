@@ -1,0 +1,126 @@
+header{
+  display: flex;
+  height: 100vh;
+  min-height:850px;
+  flex-direction: column;
+  .logo-container{
+    display: flex;
+    margin-top: 10rem;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 9.5rem;
+    .hero-logo{
+      position: relative;
+      width: 336px; //28*23
+      height: 276px;
+    }
+    .hero-text{
+      position: relative;
+      width: 431px;
+      height: 116px;
+      h2{
+        position: absolute;
+        text-align: center;
+        font-size: 5rem;
+        margin: 1rem 0;
+        letter-spacing: .3rem;
+        background: linear-gradient( to right, #fe30d4 25%, #e4086f, #6c00f5 75%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: hideAnimate 2s linear 0.5s forwards !important;
+        span.ph-item{
+          animation: hideAnimate 2s linear 0.5s forwards !important;
+          &.ph-new{
+            animation: showAnimate 2s linear 0.5s forwards !important;
+          }
+        }
+        &.text-new{
+          opacity: 0;
+          background: linear-gradient( to right, #cf334f 15%, #345fee, #fdf196 85%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: showAnimate 2s linear 1.5s forwards !important;
+        }
+      }
+    }
+
+  }
+
+  .header-container{
+    h4{
+      opacity: 0;
+      max-width: 60%;
+      margin: 0 auto 4rem;
+      text-align: center;
+      font-weight: normal;
+      font-size: 1.5rem;
+      line-height: 3rem;
+      animation: showAnimate 1s linear 3s forwards;
+    }
+    .header-container-button{
+      max-width: 60%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-evenly;
+      button{
+        opacity: 0;
+      }
+      button:nth-child(1){animation: buttonAnimate 0.3s linear 3.7s forwards;}
+      button:nth-child(2){animation: buttonAnimate 0.3s linear 3.8s forwards;}
+      button:nth-child(3){animation: buttonAnimate 0.3s linear 3.9s forwards;}
+      button:nth-child(4){animation: buttonAnimate 0.3s linear 4s forwards;}
+      button:nth-child(5){animation: buttonAnimate 0.3s linear 4.1s forwards;}
+    }
+
+  }
+}
+
+section{
+  height: 100vh;
+  // border: 1px solid white;
+}
+
+
+
+
+
+@media (max-width: 1500px){
+  .header-container{
+    h4{
+      max-width: 70% !important;
+      font-size: 1.25rem !important;
+      line-height: 2rem !important;
+    }
+    .header-container-button{
+      max-width: 70% !important;
+      .btn-lg{
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+      }
+    }
+  }
+}
+
+@media (max-height: 1000px){
+  header{
+    .logo-container{
+      margin: 6rem 0;
+      .hero-text{
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+// @media (max-height: 800px){
+//   header{
+//     .logo-container{
+//       margin: 5rem 0;
+//       .hero-text{
+//         font-size: 3rem;
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,179 @@
+.main-container.main-team{
+  opacity: 0;
+  .team-container{
+    width: 100%;
+    margin-bottom: 5rem;
+    h2{
+      opacity: 0;
+      display: inline-block;
+      font-size: 4rem;
+      background: linear-gradient( to right, #1FD2FF 20%,rgba(31, 210, 255,0.5) 70%, rgba(255,255,255,0.3) 95%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+      margin: 1rem 0;
+    }
+    p{
+      opacity: 0;
+      width: 80%;
+    }
+  }
+
+  .comm-leads-container{
+    h3{
+      opacity: 0;
+      display: inline-block;
+      font-size: 2.5rem;
+      background: linear-gradient( to right, #FA61B3 20%,rgb(250, 97, 179,0.5) 70%, rgba(255,255,255,0.3) 95%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+      margin: 1rem 0 2.5rem;
+    }
+
+    .leads-image-container{
+      display: flex;
+      flex-wrap: wrap;
+      // align-items: center;
+      justify-content: center;
+      .lead-item{
+        opacity: 0;
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 30px;
+        .img-container{
+          width: 120px;
+          height: 120px;
+          perspective: 1500px;
+          -moz-perspective: 1500px;
+          position: relative;
+          &__side{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            transition: all .8s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+            &--front{
+
+            }
+
+            &--back{
+              transform: rotateY(180deg);
+              box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-evenly;
+              align-items: center;
+              a{
+                cursor: pointer;
+                height: 32px;
+                img{
+                  width: 32px;
+                  height: 32px;
+                  margin: 5px;
+                  transition: all .3s;
+                  &:hover{
+                    scale: 1.25;
+                  }
+                }
+              }
+            }
+          }
+          &:hover .img-container__side--front{
+            transform: rotateY(180deg);
+          }
+          &:hover .img-container__side--back{
+            transform: rotateY(0);
+          }
+        }
+
+
+        h6{
+          margin: 10px 0;
+          text-align: center;
+          font-size:.8rem;
+        }
+        img{
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+        }
+      }
+
+    }
+  }
+}
+
+.main-container.main-team.animate{
+  opacity: 1;
+  .team-container{
+    h2{
+      animation: showAnimate 2s linear 1s forwards !important;
+    }
+    p{
+      animation: rightFadeIn 1s ease-in 0.5s forwards !important;
+    }
+  }
+
+  .comm-leads-container{
+    h3{
+      animation: showAnimate 2s linear 2s forwards !important;
+    }
+
+    .leads-image-container{
+      .lead-item{
+        .img-container{
+          &__side{
+            &--front{
+            }
+
+            &--back{
+            }
+          }
+        }
+      }
+
+      .lead-item:nth-child(1){ animation: buttonAnimate 0.3s ease-in 3.1s forwards;}
+      .lead-item:nth-child(2){ animation: buttonAnimate 0.3s ease-in 3.2s forwards;}
+      .lead-item:nth-child(3){ animation: buttonAnimate 0.3s ease-in 3.3s forwards;}
+      .lead-item:nth-child(4){ animation: buttonAnimate 0.3s ease-in 3.4s forwards;}
+      .lead-item:nth-child(5){ animation: buttonAnimate 0.3s ease-in 3.5s forwards;}
+      .lead-item:nth-child(6){ animation: buttonAnimate 0.3s ease-in 3.6s forwards;}
+      .lead-item:nth-child(7){ animation: buttonAnimate 0.3s ease-in 3.7s forwards;}
+      .lead-item:nth-child(8){ animation: buttonAnimate 0.3s ease-in 3.8s forwards;}
+      .lead-item:nth-child(9){ animation: buttonAnimate 0.3s ease-in 3.9s forwards;}
+      .lead-item:nth-child(10){ animation: buttonAnimate 0.3s ease-in 4s forwards;}
+      .lead-item:nth-child(11){ animation: buttonAnimate 0.3s ease-in 4.1s forwards;}
+    }
+  }
+}
+
+
+
+
+@media(max-width: 1600px){
+  .comm-leads-container{
+    .leads-image-container{
+      .lead-item{
+        margin: 10px 15px;
+      }
+    }
+  }
+}
+
+@media(max-width: 1350px){
+  .comm-leads-container{
+    .leads-image-container{
+     zoom: 95%;
+    }
+  }
+}
+

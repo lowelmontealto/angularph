@@ -1,0 +1,26 @@
+<div class="main-container main-team">
+  <div class="team-container">
+    <h2>Meet our Team</h2>
+    <p>Our Leaders are top notch technology professionals who are experienced in organizing events, engaging in speaking and mentoring aspiring developers, They are not only capable of teaching angular but also skilled and capable of different frameworks and technologies.</p>
+  </div>
+
+  <div class="comm-leads-container">
+    <h3>Community Leads</h3>
+
+    <div class="leads-image-container">
+        <div class="lead-item" *ngFor="let lead of leads">
+          <div class="img-container">
+            <div class="img-container__side img-container__side--front" [style]="'background-image: url('+lead.imgUrl+')'"></div>
+            <div class="img-container__side img-container__side--back" [style]="'background-image: url('+lead.imgUrl+')'">
+            <a ><img class="linkedin" src="/assets/images/icons/linkedin.png" alt=""></a>
+            <a ><img class="gmail" src="/assets/images/icons/gmail.png" alt=""></a>
+            <a ><img class="github" src="/assets/images/icons/github.png" alt=""></a>
+            </div>
+          </div>
+          <h6>{{lead.name}}</h6>
+
+        </div>
+    </div>
+  </div>
+
+</div>

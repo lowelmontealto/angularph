@@ -1,0 +1,34 @@
+<app-background/>
+<app-navbar/>
+<header id="header">
+  <div class="logo-container">
+    <div class="hero-logo">
+      <app-logo></app-logo>
+    </div>
+    <div class="hero-text">
+      <h2 class="text-animate text-new">AngularPH</h2>
+      <h2 class="text-animate">Angular17</h2>
+    </div>
+  </div>
+
+  <div class="header-container">
+    <h4>We are a Non Profit Tech Community who are passionate on organizing events such as meetups, seminars and conferences here in the philippines for developer students and professionals.</h4>
+    <div class="header-container-button">
+      <button  [routerLink]="'.'" [fragment]="'meetup'" class="btn btn-lg"><span></span>Meetup</button>
+      <button [routerLink]="'.'" [fragment]="'seminars'" class="btn btn-lg"><span></span>Seminars</button>
+      <button [routerLink]="'.'" [fragment]="'careers'" class="btn btn-lg"><span></span>Careers</button>
+      <button [routerLink]="'.'" [fragment]="'team'" class="btn btn-lg"><span></span>Our Team</button>
+      <button [routerLink]="'.'" [fragment]="'contact'"class="btn btn-lg"><span></span>Contact Us</button>
+    </div>
+  </div>
+</header>
+
+<section  id="meetup">
+    <app-meetup/>
+</section>
+<section  id="seminars"></section>
+<section  id="careers"></section>
+<section  id="team">
+  <app-team/>
+</section>
+<section  id="contact"></section>

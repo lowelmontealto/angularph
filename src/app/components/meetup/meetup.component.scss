@@ -1,0 +1,17 @@
+.main-container.main-meetup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 100%;
+  h2{
+    display: inline-block;
+      font-size: 4rem;
+      background: linear-gradient( to right, #1FD2FF 20%,rgba(31, 210, 255,0.5) 70%, rgba(255,255,255,0.3) 95%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+      margin: 1rem 0;
+  }
+}
